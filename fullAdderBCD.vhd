@@ -19,7 +19,7 @@ architecture arc_fullAdderBCD of fullAdderBCD  is
 
 begin
 
-    process (A,B,carryIn)
+    process (A,B,carryIn, resultado, aux)
 
     begin
     

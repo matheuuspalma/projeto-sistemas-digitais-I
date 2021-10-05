@@ -4,7 +4,7 @@ use ieee.std_logic_unsigned.all;
 
 entity fullAdderBCD_8algarismos is
 port (A,B : in std_logic_vector (31 downto 0);
-		S   : out std_logic_vector (31 downto 0));
+		C   : out std_logic_vector (31 downto 0));
 		
 end fullAdderBCD_8algarismos;
 
@@ -36,6 +36,6 @@ architecture arc of fullAdderBCD_8algarismos is
 	S6 : fullAdderBCD port map (arrA (6), arrB (6), arrs (6), c_aux6, c_aux7);
 	S7 : fullAdderBCD port map (arrA (7), arrB (7), arrs (7), c_aux7, c_aux8);
 	
-	S <= arrs (7) & arrs (6) & arrs (5) & arrs (4) & arrs (3) & arrs (2) & arrs (1) & arrs (0);
+	C <= arrs (7) & arrs (6) & arrs (5) & arrs (4) & arrs (3) & arrs (2) & arrs (1) & arrs (0);
 	
 end arc;
